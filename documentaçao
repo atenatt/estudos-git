@@ -1,0 +1,88 @@
+# Mostrar a branch
+    git branch
+# Criar uma branch
+    git branch nome-da-branch
+# Excluir branch
+    git branch -D nome-da-branch
+# Criar uma branch e ir para ela
+    git checkout -b nome-da-branch
+
+# Ver o log de uma branch
+    git log main
+
+# Ver a diferença de duas branchs
+    git diff main nome-da-branch
+
+## Gerenciando Branches no Git
+
+Este guia apresenta os comandos básicos para gerenciar branches no Git, permitindo que você trabalhe em diferentes versões do seu projeto de forma organizada e eficiente.
+
+### Visualizar as Branches Existentes
+
+Para listar todas as branches, tanto locais quanto remotas, no seu repositório, utilize o comando:
+
+```bash
+git branch
+```
+
+### Criar uma Nova Branch
+
+Para criar uma nova branch a partir da branch atual e posicionar-se nela, utilize o comando:
+
+```bash
+git checkout -b nome-da-branch
+```
+
+Substitua `nome-da-branch` pelo nome desejado para a sua nova branch.
+
+### Excluir uma Branch
+
+Para excluir uma branch local, utilize o comando:
+
+```bash
+git branch -D nome-da-branch
+```
+
+**Observação:** Este comando exclui a branch permanentemente. Utilize-o com cautela!
+
+### Verificar o Log de uma Branch
+
+Para visualizar o histórico de commits de uma branch específica, utilize o comando:
+
+```bash
+git log nome-da-branch
+```
+
+Substitua `nome-da-branch` pelo nome da branch que deseja consultar o log.
+
+### Comparar Diferenças entre Branches
+
+Para comparar as diferenças entre duas branches, utilize o comando:
+
+```bash
+git diff branch-base nome-da-branch
+```
+
+Substitua `branch-base` pela branch que você deseja usar como referência e `nome-da-branch` pela branch que deseja comparar.
+
+### Exemplos Práticos
+
+* **Criar uma branch para corrigir um bug:**
+
+```bash
+git checkout -b corrigir-bug
+```
+
+* **Comparar as diferenças entre a branch `master` e a branch `corrigir-bug`:**
+
+```bash
+git diff master corrigir-bug
+```
+
+* **Excluir a branch `corrigir-bug` após mesclar as alterações:**
+
+```bash
+git checkout master
+git merge corrigir-bug
+git branch -D corrigir-bug
+```

@@ -1,8 +1,7 @@
 # Configurar o GIT
     git config --global user.name "Victor Pedro"
     git config --global user.email "victor.boas@fatec.sp.gov.br"
-
-# Verificar as configuraçoes globais
+    # Verificar as configuraçoes globais
     git config --global list
 
 # Inicializar o git
@@ -11,13 +10,11 @@
 # Clonar um repositório
     git clone https://github.com/user/arquivo.git
 
-# Adicionar um arquivo especifico ao state
-    git add arquivo.git
-
 # Adicionar todos os arquivos do diretório corrente
     git add .
-
-# Adicionar todos os arquivos terminados em .html
+    # Adicionar um arquivo especifico ao state
+    git add arquivo.git
+    # Adicionar todos os arquivos terminados em .html
     git add *.html
 
 # Verificar o status do arquivos
@@ -31,13 +28,36 @@
 
 # Ver a diferença do arquivo no state e o atual
     git diff
+    # Ver a diferença de um arquivo especifico
     git diff arquivo.git
-
-# Commitar um arquivo 
-    git commit -m "Primeiro commit"
-
-
-
 
 # Confirmar uma alteração
     git commit -m "Mensagem da atualizaçao"
+    # Adicionar um arquivo no stage e commitar junto
+    git commit -a -m "Mensagem da atualizacao"
+    # Modificar o ultimo commit
+    git commit --amend -m "Texto atualizado"
+
+# Ver a diferença do ultimo código para o atual
+    git diff --staged
+
+# Verificar os logs dos commits
+    git log
+    # Os ultimos 3 logs
+    git log -3
+    # Tudo em uma linha
+    git log --oneline -5
+    # Com organização das branch
+    git log --oneline -5 -graph
+    # Filtrar por autor
+    git log --author="Victor Pedro"
+    # Filtrar por data
+    git log -- pasta/
+    # Versão mais curta
+    git shortlog
+    # Quantidade de commits por auto
+    git shortlog -sn
+    
+    # Logs das ações
+    git reflog
+

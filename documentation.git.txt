@@ -1,0 +1,43 @@
+# Configurar o GIT
+    git config --global user.name "Victor Pedro"
+    git config --global user.email "victor.boas@fatec.sp.gov.br"
+
+# Verificar as configuraçoes globais
+    git config --global list
+
+# Inicializar o git
+    git init
+
+# Clonar um repositório
+    git clone https://github.com/user/arquivo.git
+
+# Adicionar um arquivo especifico ao state
+    git add arquivo.git
+
+# Adicionar todos os arquivos do diretório corrente
+    git add .
+
+# Adicionar todos os arquivos terminados em .html
+    git add *.html
+
+# Verificar o status do arquivos
+    git status
+
+# Remover uma atualização do state
+    git reset arquivo.git
+
+# Restaurar o diretorio
+    git restore arquivo.git
+
+# Ver a diferença do arquivo no state e o atual
+    git diff
+    git diff arquivo.git
+
+# Commitar um arquivo 
+    git commit -m "Primeiro commit"
+
+
+
+
+# Confirmar uma alteração
+    git commit -m "Mensagem da atualizaçao"
